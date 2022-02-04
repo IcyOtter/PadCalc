@@ -30,3 +30,10 @@ PPD = Defect_PadsPS * 2; #Pallets per day
 print("Normal amount of pad gatlord needed per 12hr shift: ", round(Perfect_PadsPS));
 print("Amount of pads needed with mistakes: ", round(Defect_PadsPS));
 print("Gaylors of pads needed per day: ", round(PPD));
+
+question = input("Would you like to calculate the number of trays you will be using? Y or N\n");
+
+if question == 'Y':
+    print(round(PPS));
+else:
+    exit();
