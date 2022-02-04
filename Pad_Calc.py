@@ -24,15 +24,20 @@ PPB = int(pad) / int(tray); #Pallets Per Box
 #print(PPB);
 
 Perfect_PadsPS = (PPS / PPB); #This calculate total boxes need if you run with no issues
-PercentError = Perfect_PadsPS * .4; #Lines 27 and 28 add a 40% error on pads
+
+pE = input("Please enter the estimated padding errors as a percent: \n"); #Asks for user input as a percent to calculate padding errors
+
+PercentError = Perfect_PadsPS * float(pE); #Adds the estimated padding errors
 Defect_PadsPS = Perfect_PadsPS + PercentError;
 PPD = Defect_PadsPS * 2; #Pallets per day
-print("Normal amount of pad gatlord needed per 12hr shift: ", round(Perfect_PadsPS));
-print("Amount of pads needed with mistakes: ", round(Defect_PadsPS));
-print("Gaylors of pads needed per day: ", round(PPD));
 
-question = input("Would you like to calculate the number of trays you will be using? Y or N\n");
+#Prints the results from all of the above input
+print("Standard amount of pads needed per shift: ", round(Perfect_PadsPS));
+print("Amount of pads needed with potential errors: ", round(Defect_PadsPS));
+print("Gaylords of pads needed per day: ", round(PPD));
 
+question = input("Would you like to calculate the number of trays you will be using? Y or N\n"); #Allows you to see how many
+                                                                                                 #pallets will be done
 if question == 'Y':
     print(round(PPS));
 else:
