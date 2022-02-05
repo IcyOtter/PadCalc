@@ -36,7 +36,7 @@ print("Standard amount of pads needed per shift: ", round(Perfect_PadsPS));
 print("Amount of pads needed with potential errors: ", round(Defect_PadsPS));
 print("Gaylords of pads needed per day: ", round(PPD));
 
-question = input("Would you like to calculate the number of trays you will be using? Y or N\n"); #Allows you to see how many
+question = input("Would you like to calculate the number of trays you will be completing? Y or N\n"); #Allows you to see how many
                                                                                                  #pallets will be done
 if question == 'Y':
     print(round(PPS));
